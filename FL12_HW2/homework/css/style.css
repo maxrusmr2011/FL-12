@@ -38,6 +38,7 @@
 #about .box-bg:hover{
 	background-color:lightgrey;
 	color:lightskyblue;
+	font-style:italic;
 }
 section.heading h2{
 	text-align:center;
