@@ -97,7 +97,7 @@ p.tm-section-description{
 	position:relative;
 }
 #ideas+section textarea{
-	background:url('../img/email-icon.png') 98.5% 95% no-repeat;
+	background:url('../img/email-icon.png') right 15px bottom 15px no-repeat;
 	background-size:30px;
 }
 
