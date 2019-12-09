@@ -222,9 +222,6 @@ p.tm-section-description{
 	text-indent:0;
 	line-height:24px;
 }
-#home p{
-	animation:none;
-}
 section.heading li:first-of-type:after, section.heading li:nth-of-type(3):after{
 	content:'';
 }
