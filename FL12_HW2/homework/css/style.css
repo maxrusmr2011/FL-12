@@ -17,7 +17,7 @@
 	80%{transform:translateX(0px);}
 	100%{transform:translateX(0px);}
 }
-@media screen{
+@media not print {
 #home p{
 	animation:4.8s cubic-bezier(.36,.35,.27,.98) normal infinite forwards anim_text;
 }
