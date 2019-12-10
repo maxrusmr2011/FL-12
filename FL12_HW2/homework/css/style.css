@@ -8,6 +8,7 @@
 #home>div>div{
 	background-color:#fff;
 }
+
 #home p{
 	text-shadow:#333 5px 5px 2px;
 }
@@ -16,9 +17,10 @@
 	80%{transform:translateX(0px);}
 	100%{transform:translateX(0px);}
 }
+@media screen{
 #home p{
-	position:relative;
 	animation:4.8s cubic-bezier(.36,.35,.27,.98) normal infinite forwards anim_text;
+}
 }
 #home+section>.flex-2-col{
 	display:flex;	
