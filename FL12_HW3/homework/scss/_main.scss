@@ -1,0 +1,279 @@
+@mixin panel(){
+	width:1920px;
+	margin:0 auto;
+};
+@mixin fonts($family:1,$size:inherit,$weight:normal,$lheight:1 ){
+	font:{
+		size:$size;
+		weight:$weight;
+	}
+	line-height:$lheight;
+	@if $family == 1 {
+		font-family:'Hind', sans-serif;
+	}@elseif $family == 2 {
+		font-family:'Source Sans Pro', sans-serif;
+	}@else{
+		font-family:'Fresca', sans-serif;
+	}
+};
+
+@mixin buttons($bg_button){
+	background:$bg_button;
+	border:none;
+	border-radius:3px;
+	width:140px;
+	height:50px;
+	@include fonts(1,16px,700);
+	color:#fff;
+};
+
+@mixin link($size){
+	@include fonts(2,$size,600);
+	color:#fff;
+};
+@mixin selected($color,$left,$top,$width,$height){
+	content:' ';
+	display:block;
+	position:absolute;
+	background:$color;
+	top:$top;
+	left:$left;
+	width:$width;
+	height:$height;
+	z-index: -1;
+};
+.logos{
+	display:flex;
+	align-items:center;
+	height:45px;
+	color:$header-color;
+	img{
+		float:left;
+		margin-right:15px;
+		width:44px;
+	}
+	p{				
+		text-align:center;
+		@include fonts(1,18px,700);
+		span{
+			display:block;
+			font-size:8px;
+		}
+	}
+};
+
+
+body{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	background-color: $body-background;
+	.header{
+		@include panel;
+		z-index:2;
+		background:url('../img/#{$header_photo_url}.jpg') no-repeat 0% 50%;
+		background-size:cover;
+		height:720px;
+		border-radius:0 0 760px/300px 0;
+		.header-wrap{
+			padding-top:20px; 
+			margin-left:190px;
+			color:$header-color;
+			.landing-logo{
+				@extend .logos;
+			}
+			.header_heading{
+				width:20%;
+				margin-top:80px;
+				margin-bottom:65px;
+				@include fonts(2,50px,700,1);			
+				position:relative;
+				z-index: 40;
+				&:after{
+					@include selected($selected-color,0,60px,210px,45px);
+				}
+			}
+			.header_text{
+				@include fonts(1,16px,400,1.5);
+				margin-bottom:65px;
+				margin-left: -35px;
+				white-space: pre;
+			}
+			div:last-child{
+				.header_button{
+					@include buttons($button_color);
+					margin-right:150px;
+				}
+				.login{
+					&:link{
+						@include link(20px);
+					}
+				}
+			}
+		}
+	}
+	.section{
+		@include panel;	
+		margin-top:-740px;
+		z-index:-1;  
+		background-color: $body-background;
+		padding-top:740px;
+		text-align:center;
+		position:relative;
+		.section_text{
+			@include fonts(2,30px,600,1);
+			color:$cards-title-color;
+			display:inline-block;
+			position:relative;
+			z-index: 40;
+			&:after{
+				@include selected($selected-color,154px,-8px,136px,36px);
+			}
+		}
+		.section_card_wrap{
+			width:1120px;
+			margin:5px auto;
+			margin-bottom:80px;
+			&>div:first-child{
+				margin-top:0;
+			}	
+			.section_card{
+				box-sizing:border-box;
+				background:$card-background;
+				padding:20px;
+				display:flex;
+				align-items:center;
+				margin:20px;
+				border-radius: 5px;
+				&>*{
+					display:inline-block;
+				}
+				img{
+					border-radius: 5px;
+					flex-shrink:0;
+				}
+
+				&:nth-of-type(1) img{
+					width:map-get($pict_map,w1);
+					height:map-get($pict_map,h1);
+				}
+				&:nth-of-type(2) img{
+					width:map-get($pict_map,w2);
+					height:map-get($pict_map,h2);
+				}
+				&:nth-of-type(3) img{
+					width:map-get($pict_map,w3);
+					height:map-get($pict_map,h3);
+				}		
+
+				.section_card_right_container{
+					margin:auto 20px;
+					//width:500px;
+					.section_card_heading{
+						@include fonts(2,22px,600,1);
+						color:#fff;
+						margin-top: 0;
+					}
+					.section_card_text{
+						box-sizing:border-box;
+						@include fonts(1,16px,600,1.5);
+						color:#d1d1d1;
+						margin:50px $add_margin 30px $add_margin;
+						text-align:justify;
+					}
+					.section_link{
+						&:link{
+							@include link(16px);
+							color:#d1d1d1;
+						}
+					}
+				}
+			}
+		}
+		.section_banner{
+			box-sizing:border-box;
+			width:1200px;
+			height:145px;
+			padding:30px 165px;
+			border-radius: 5px;
+			background:linear-gradient(to right,$button_color,$bannet-gradient);
+			margin:0 auto;
+			position:relative; 
+			top:75px;
+			z-index: 2;
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			.section_banner_text_wrap{
+				text-align:left;
+				.section_banner_heading{
+					margin-top: 16px;
+					@include fonts(1,22px,600);
+					color:#000;
+					position:relative;
+					z-index: 40;
+					&:after{
+						@include selected($selected-color,91px,-18px,45px,40px);
+					}
+				}
+				.section_banner_text{
+					@include fonts(1,16px,400);
+					color:#fff;
+				}
+			}
+			.section_banner_button{
+				@include buttons($button_color);
+			}
+		}
+	}
+	.footer{
+		box-sizing:border-box;
+		@include panel;
+		background:$footer-background;
+		color:$footer-color;
+		height:240px;
+		padding-left:190px;
+		padding-right:190px;
+		padding-top:110px;
+		z-index: -10;
+		position:relative;
+		.footer-wrap{
+			display:flex;
+			justify-content: space-between;
+			align-items:center;
+			&>*{
+				display:inline-block;
+			}
+			.footer_logo{
+				@extend .logos;
+				color:$footer-color;
+			}
+			.footer_text{
+				width:$footer-width;
+				@include fonts(1,14px,600,1.5);
+			}
+			.footer-cr{
+				@include fonts(1,14px,600,1.5);			
+
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
