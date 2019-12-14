@@ -96,9 +96,8 @@ header{
 main{
 	background: #ffffff;
 	width:100%;
-
 }
-.articles{
+.main_container{
 	max-width:945px;
 	margin:0 auto;
 	padding-top:25px;
