@@ -1,0 +1,437 @@
+body {
+  font-family: roboto;
+}
+.post-1 {
+  background: #9d27b0;
+}
+.post-2 {
+  background: #9bb800;
+}
+.post-3 {
+  background: #ed5120;
+}
+.post-4 {
+  background: #9d27b0;
+}
+.post-5 {
+  background: #2d95bb;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+body {
+  background: #0b192f;
+  margin:0 auto;
+  padding:0;
+  width:100%;
+  max-width:640px;
+  color:#fff; 
+}
+header{
+  background: #024161;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+.logo{
+  margin-left:10px; 
+}
+.logo h1{
+  font-weight: 200;
+  font-size: 20px;
+}
+.logo h1 span{
+  color:#d12767;
+}
+.sandwich{
+  display: none;
+}
+nav ul{
+  list-style-type:none;
+  margin:0;
+  padding:0; 
+  margin-right: 30px;
+}
+nav ul>li{
+  display:inline-block; 
+}
+nav a{
+  height:100%;
+  display:block;
+  padding:2em 1em;
+  font-size: 10px;
+}
+nav a:link,nav a:visited{
+  color:#fff;
+  text-decoration:none;
+
+}
+nav a:hover{
+  background:#1f52a4;
+}
+.post h3{
+  font-size:26px; 
+  font-weight:200;
+  margin-bottom:10px;
+  margin-top:0;   
+}
+.post p{
+  margin:0;
+  font-size:8px;
+  line-height: 2;
+  opacity:.7; 
+}
+.top{
+  height:200px;
+  background: url('../img/post0.jpg') left 0% bottom 0% no-repeat;
+  background-size: cover;
+  padding:30px 200px 30px 20px;
+  display: flex;
+  flex-direction:column; 
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.container{
+  display: flex;
+  margin-bottom: 10px;
+}
+.posts{
+  flex: 0 0 75%;
+  margin-right: 10px; 
+}
+.posts article{
+  position:relative;
+  display:flex;
+  align-items:center;  
+}
+.posts article:nth-of-type(even){
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.posts article:last-of-type{
+   min-height:100px;
+}
+.posts>article:nth-of-type(odd)>.post{
+  padding-right:30px;
+}
+.posts>article:nth-of-type(even)>.post{
+  padding-left:30px;
+}
+.posts .image{
+  display: block;
+  height:160px;
+  flex:0 0 49.7%;
+}
+.posts article img{
+  height:100%;
+  width:100%;
+}
+.posts article .post{
+  padding:10px 20px;
+}
+.posts article h3{
+  margin-bottom: 6px;
+}
+.posts article p{
+  line-height: 1.6;
+}
+.posts article:nth-of-type(odd) .date{
+  right:5px;
+}
+.posts article:nth-of-type(even) .date{
+  left:5px;
+}
+.post>.date{
+  position:absolute; 
+  top:5px;
+  text-align: center;
+  opacity:.2;
+}
+.date>.day{
+  font-size:28px;
+  font-weight: 300;
+}
+.date>.month{
+  font-size:14px; 
+}
+.posts article a:link,.posts article a:visited{
+  text-decoration: none;
+  color:#fff;
+}
+.posts article a:hover{
+  opacity:.5;
+}
+.posts article:nth-of-type(5n+1){
+  background: #9d27b0;
+}
+.posts article:nth-of-type(5n+2){
+  background: #9bb800;
+}
+.posts article:nth-of-type(5n+3){
+  background: #ed5120;
+}
+.posts article:nth-of-type(5n+4){
+  background: #9d27b0;
+}
+.posts article:nth-of-type(5n+5){
+  background: #2d95bb;
+}
+aside article{
+  background:#fff;
+  color:#000; 
+}
+aside img{
+  display: block;
+  width:100%;
+}
+aside .news{
+  padding: 16px 18px;
+}
+aside .news h3{
+  margin: 0 0 6px 0;
+  font-size:16px;
+  font-weight:300; 
+}
+aside .news p{
+  margin:0;
+  font-size:8px;
+  line-height: 1.5;
+  opacity:.7;
+}
+footer{
+  height:50px;
+  padding:10px 15px;
+  background: #024161;
+  color:#fff;
+  font-size: 8px;
+  display: flex;
+  justify-content: space-between;
+  opacity:.4;
+}
+.footer_container{
+  align-self: flex-end;
+  line-height: 1.5;  
+}
+.design{
+  align-self:center;
+}
+.footer_container>div>div{
+  display: inline-block;
+}
+
+@media (max-width:768px){
+body{
+  padding:0 1vw;
+  max-width:none; 
+}
+header,.top,.container{
+  margin-bottom: 1vw;
+}
+.posts{
+  margin-right: 1vw;
+}
+header{
+  padding:4vw;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height:30vw;
+}
+.sandwich{
+  display: inline-block;
+  border:none;
+  background: transparent;
+  color:#fff;
+  transform:scaleX(1.5);
+  font-size:3vw; 
+}
+nav{
+  display:none;
+}
+.logo h1{
+  font-size: 5vw;
+}
+.top{
+  height:50vw;
+  padding:6vw;
+}
+.top h3{
+font-size: 6vw;
+margin-bottom:2vw; 
+}
+.top p{
+font-size: 1.8vw;
+line-height: 1.5;
+}
+.posts{
+  flex: 0 0 65%;
+}
+.posts>article{
+  position:static !important;
+  display:block;
+  position:relative;
+}
+.posts .image{
+  width:100%;
+  height:auto;
+  padding-bottom: 60%;
+  position:relative;
+  overflow:hidden;
+}
+.posts article img{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  position: absolute;
+  top:0;  
+  left:0;
+}
+.posts>article .post{
+  position:relative;
+  padding:5vw !important;
+  text-align:left; 
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.posts>article .post>h3{
+  padding-right:3vw ;
+  margin-bottom: 3vw;
+  font-size: 6vw;
+  line-height: 1;
+}
+.posts article p{
+  font-size: 1.9vw;
+  line-height: 1.6;
+}
+.posts article .post>.date{
+  left:auto;
+  right:2.2vw;
+  top:2.2vw;
+}
+.date>.day{
+  font-size:7vw;
+}
+.date>.month{
+  font-size:4vw; 
+}
+.posts>article:last-of-type .date{
+  position:static;
+  margin-top:5vw; 
+}
+aside .news{
+  padding: 5vw;
+}
+aside .news h3{
+  margin-bottom: 1.7vw;
+  font-size: 3.5vw;
+  line-height: 1;
+}
+aside .news p{
+  font-size:1.8vw;
+}
+footer{
+  height:auto;
+  padding:4vw;
+  font-size: 1vw;
+  display: block;
+  text-align: center;
+  font-size: 2vw
+}
+}
+
+
+@media (max-width:480px){
+body{
+  padding:0 2vw;
+}
+header,.top{
+  margin-bottom: 2vw;
+}
+.container{
+  margin-bottom: 8vw;
+}
+.posts{
+  margin-right: 0;
+}
+header{
+  height:50vw;
+}
+.sandwich{
+  font-size:5vw; 
+}
+
+.logo h1{
+  font-size: 8vw;
+}
+.top{
+  height:83vw;
+  padding:10vw 8vw;
+}
+.top h3{
+font-size: 11vw;
+margin-bottom:4vw; 
+}
+.top p{
+font-size: 3.6vw;
+line-height: 1.5;
+}
+.container{
+  display: block;
+}
+.posts .image{
+  padding-bottom: 67%; 
+}
+.posts>article .post{
+  padding:8vw !important;
+}
+.posts>article .post>h3{
+  padding-right:7vw ;
+  margin-bottom: 6vw;
+  font-size: 11vw;
+}
+.posts article p{
+  font-size: 3.5vw;
+}
+.posts>article:last-of-type .date{
+  margin-top:15vw;
+  right:2.5vw;
+  top:3.2vw;
+}
+.date>.day{
+  font-size:11vw;
+}
+.date>.month{
+  font-size:6vw; 
+}
+aside .image{
+  padding-bottom: 67%; 
+  position:relative;
+  overflow:hidden;
+}
+aside article img{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  position: absolute;
+  top:0;  
+  left:0;
+}
+aside article .news{
+  padding:7vw ;
+}
+aside article .news>h3{
+  margin-bottom: 3vw;
+  font-size: 6vw;
+}
+aside article .news>p{
+  font-size: 3.1vw;
+}
+footer{
+  font-size: 3.5vw;
+  padding:7vw 2vw;
+}
+}
