@@ -105,14 +105,15 @@ nav a:hover{
 .posts article{
   position:relative;
   display:flex;
-  align-items:center;  
+  align-items:stretch;
+  min-height:100px;  
 }
 .posts article:nth-of-type(even){
   flex-direction: row-reverse;
   text-align: right;
 }
-.posts article:last-of-type{
-   min-height:100px;
+.posts article .post{
+  padding:20px 20px;
 }
 .posts>article:nth-of-type(odd)>.post{
   padding-right:30px;
@@ -122,16 +123,20 @@ nav a:hover{
 }
 .posts .image{
   display: block;
-  height:160px;
+  position:relative;
+  overflow: hidden;
+  min-height:160px;
   flex:0 0 49.7%;
 }
 .posts article img{
+  position: absolute;
+  bottom:0;
+  left:0;
   height:100%;
   width:100%;
+  object-fit:cover;
 }
-.posts article .post{
-  padding:10px 20px;
-}
+
 .posts article h3{
   margin-bottom: 6px;
 }
