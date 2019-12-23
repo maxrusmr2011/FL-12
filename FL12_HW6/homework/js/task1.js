@@ -12,7 +12,7 @@ if(!varA||!varB||!varC){
 	varA=Number(varA);
 	varB=Number(varB);
 	varC=Number(varC);
-	if(isNaN(varA)||isNaN(varB)||isNaN(varB)||!isFinite(varA)||!isFinite(varB)||!isFinite(varC)||varA === zero) {
+	if(!isFinite(varA)||!isFinite(varB)||!isFinite(varC)||varA === zero) {
 		console.log('Invalid input data');
 	}else{
 		varD = varB * varB - num4 * varA * varC;			

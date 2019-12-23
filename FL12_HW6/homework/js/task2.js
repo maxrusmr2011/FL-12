@@ -12,7 +12,7 @@ if(!varA||!varB||!varC){
 	varA=Number(varA);
 	varB=Number(varB);
 	varC=Number(varC);	
-	if(isNaN(varA)||isNaN(varB)||isNaN(varC)||!isFinite(varA)||!isFinite(varB)||!isFinite(varC) ){
+	if(!isFinite(varA)||!isFinite(varB)||!isFinite(varC) ){
 		alert('input values should be ONLY numbers');
 	}else if(varA<=zero||varB<=zero||varC<=zero){
 		alert('A triangle must have 3 sides with a positive definite length ');
