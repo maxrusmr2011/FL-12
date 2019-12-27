@@ -15,8 +15,8 @@ if ( !confirm('Do you want to play a game?') ) {
 			'\nAttempts left: ' + (ATTEMPTS - i) +
 			'\nTotal prize: ' + totalPrize + '$' +
 			'\nPossible prize on current attempt: ' + currPrize + '$\n';
-			if ((gamerNum = prompt(str)) && gamerNum.trim() && 
-				isFinite(gamerNum = Number(gamerNum)) && gamerNum === randNum ) { 
+			if ((gamerNum = prompt(str)) && (gamerNum = parseInt(gamerNum)) && 
+				gamerNum === randNum ) { 
 				totalPrize += currPrize;
 				win = true;
 				break;
