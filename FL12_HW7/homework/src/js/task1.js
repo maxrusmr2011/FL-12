@@ -8,8 +8,8 @@ if ( !(email = prompt('Input your email') ) ) {
 	alert('I don\'t know you');
 } else if ( !(pass = prompt('Input your password') ) ) {
 	alert('Canceled');
-} else if ( (email !== 'user@gmail.com' || pass !== 'UserPass') && 
-		(email !== 'admin@gmail.com' || pass !== 'AdminPass') ) {
+} else if ( (email !== 'user@gmail.com' || pass !== 'UserPass') &&
+	(email !== 'admin@gmail.com' || pass !== 'AdminPass') ) {
 	alert('Wrong password');
 } else if ( !confirm('Do you want to change your password?') ) {
 	alert('You have failed the change.');
@@ -22,7 +22,7 @@ if ( !(email = prompt('Input your email') ) ) {
 } else if (newPass.length < NUM6) {
 	alert('It\'s too short password. Sorry.');
 } else if ( prompt('Input your new password again') !== newPass ) {
-	alert('You wrote the wrong password.');				
+	alert('You wrote the wrong password.');
 } else {
-	alert('You have successfully changed your password.');			
+	alert('You have successfully changed your password.');
 }
