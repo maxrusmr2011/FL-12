@@ -2,7 +2,7 @@ function countNumbers (str) {
 	let NUM0 = 0, NUM1 = 1, result = {};
 	str = makeNumber(str);
 	for (let i = NUM0; i < str.length; i++) {
-		result['\''+str[i]+'\''] = (result['\''+str[i]+'\''] || NUM0) + NUM1;
+		result[str[i]] = (result[str[i]] || NUM0) + NUM1;
 	}
 	return result;
 }
