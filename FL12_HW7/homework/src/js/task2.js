@@ -10,7 +10,7 @@ if ( !confirm('Do you want to play a game?') ) {
 		let randNum = Math.floor( Math.random() * (currRange + NUM1) );
 		next = false;
 		for (let i = NUM0; i < ATTEMPTS; i++) {
-			currPrize = defPrizes[i] * (RISEPRIZE ** countWins);
+			currPrize = defPrizes[i] * Math.pow(RISEPRIZE, countWins);
 			let str = 'Choose a roulette pocket number from 0 to ' + currRange +
 			'\nAttempts left: ' + (ATTEMPTS - i) +
 			'\nTotal prize: ' + totalPrize + '$' +
