@@ -5,4 +5,4 @@ function pipe (num) {
 	}
 	return num;
 }
-void pipe(); 
+void pipe();
