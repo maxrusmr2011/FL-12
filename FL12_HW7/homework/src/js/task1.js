@@ -9,7 +9,7 @@ if ( !(email = prompt('Input your email') ) ) {
 } else if ( !(pass = prompt('Input your password') ) ) {
 	alert('Canceled');
 } else if ( (email !== 'user@gmail.com' || pass !== 'UserPass') &&
-	(email !== 'admin@gmail.com' || pass !== 'AdminPass') ) {
+		(email !== 'admin@gmail.com' || pass !== 'AdminPass') ) {
 	alert('Wrong password');
 } else if ( !confirm('Do you want to change your password?') ) {
 	alert('You have failed the change.');
