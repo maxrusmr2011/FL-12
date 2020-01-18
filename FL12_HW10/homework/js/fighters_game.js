@@ -19,7 +19,7 @@ function Fighter (obj) {
 	}
 	this.attack = function (enemy) {
 		const PERCENT = 100;
-		if (Math.ceil(Math.random() * PERCENT) < 
+		if (Math.ceil(Math.random() * PERCENT) <=
 				PERCENT - (enemy.getStrength() + enemy.getAgility() ) ) {
 			enemy.dealDamage(damage);
 			console.log(`${name} makes ${damage} damage to ${enemy.getName()}`);
