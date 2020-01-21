@@ -1,3 +1,4 @@
+let Fighter = (function () {
 function Fighter (obj) {
 	const name=obj.name, damage = obj.damage, strength = obj.strength,
 			agility = obj.agility, hpTotal = obj.hp;
@@ -44,6 +45,8 @@ function Fighter (obj) {
 		losses++;
 	}	
 }
+return Fighter;
+}())
 function battle (first, second) {
 	let odd = Math.round(Math.random()), fighter, defender;
 	if (!first.getHealth()) {
