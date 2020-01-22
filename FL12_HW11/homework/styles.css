@@ -1,0 +1,25 @@
+#root{
+	cursor: pointer;
+}
+.material-icons{
+	font-size: 1em;
+	transform: translateY(.2em);
+	margin-right: 2px;
+}
+.folder{
+	color:#edbc0b;
+}
+.file{
+	color:#bbb;
+}
+#root ul{
+	padding-left: 10px;
+	list-style-type: none;
+}
+#root ul.empty{
+	padding-left: 5px;
+	font-style:italic;
+}
+div.hover:hover{
+	background: #eee;
+}
