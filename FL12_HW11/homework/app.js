@@ -45,7 +45,7 @@ function el (element, arr) {
     for (let i in arr) {
       if (typeof arr[i] === 'string') {
         if (arr[i][NUM0] === '.') {
-          created.className = arr[i].slice(NUM1);
+          created.classList.add(arr[i].slice(NUM1));
         } else {
           created.textContent = arr[i];
         }
@@ -60,7 +60,9 @@ function el (element, arr) {
 function folders (arrFolders) {
   const NUM0 = 0;
   let ul = el('ul');
-  ul.hidden = hideLevel;
+  if (hideLevel) {
+    ul.className = 'hide';
+  }
   hideLevel = true;
   if (arrFolders) {
     for (let i = NUM0; i < arrFolders.length; i++) {
@@ -79,7 +81,7 @@ function folders (arrFolders) {
 function createLi (name, iconName) {
   let div = el('div');
   if (iconName) {
-    let icon = el('i', [iconName, `.material-icons ${iconName === 'folder' ? 'folder' : 'file'}`]);
+    let icon = el('i', [iconName, '.material-icons', `.${iconName === 'folder' ? 'folder' : 'file'}`]);
     el(div, ['.hover', icon]);
     if (iconName === 'folder') {
       div.addEventListener('click', click);
@@ -88,10 +90,9 @@ function createLi (name, iconName) {
   return el('li', [ el(div, [ el('span', [name]) ] ) ] );
 }
 
-function click (event) {
-  let el = event.currentTarget;
-  el.nextElementSibling.hidden = !el.nextElementSibling.hidden;
-  el.firstElementChild.textContent = el.nextElementSibling.hidden ?
+function click () {
+  this.nextElementSibling.classList.toggle('hide');
+  this.firstElementChild.textContent = this.nextElementSibling.classList.contains('hide') ?
       'folder' : 'folder_open';
 }
 

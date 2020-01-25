@@ -23,3 +23,6 @@
 div.hover:hover{
 	background: #eee;
 }
+.hide{
+	display: none;
+}
