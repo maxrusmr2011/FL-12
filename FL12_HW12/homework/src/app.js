@@ -65,6 +65,8 @@ function formListSets () {
 			divTitle.addEventListener('click', function () {
 					let markIndex = parseInt(this.parentNode.id.slice(NUM3));
 					listSets[markIndex].studied = true;
+					let arrMoveSet = listSets.splice(markIndex, NUM1);
+					listSets.push(arrMoveSet[NUM0]);
 					el('#all_sets', ['_del', formListSets()]);
 			});				
 		}
@@ -221,7 +223,7 @@ function restore () {
 }
 
 function save() {
-	if (listSets) {
+	if (listSets.length) {
 		localStorage['listSets'] = JSON.stringify(listSets);
 	} else {
 		localStorage.clear();
