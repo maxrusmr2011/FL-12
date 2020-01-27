@@ -1,0 +1,88 @@
+body{
+	background: #fcfde1;
+	margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+#root{
+	margin: 20px;
+}
+#add{
+	text-align: right;
+	margin-bottom: 20px; 
+}
+#add>button{
+	padding: 5px 30px;
+	border-radius: 5px;
+	border: 1px solid #888;
+	box-shadow: 1px 1px 5px #555; 
+	font-size: 1.5em; 
+}
+.set, .term{
+	box-shadow: 1px 1px 5px #bbb;
+	background: #fff;
+	margin: 10px 0;
+	padding: 10px 5px;
+	min-height: 50px;
+	position: relative;
+}
+
+.set{
+	font-size: 2em;
+	font-weight: 600;
+	font-family: arial;
+}
+.term{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.term>button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	background: transparent;
+}
+.term>input{
+	width: 48%;
+	padding-bottom: 5px;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+.hover:hover{
+	background: #eee;
+	cursor: pointer;
+}
+.studied{
+	background: #c9feca;
+}
+.studied:after{
+	content: 'studied';
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	color: red;
+	font-size: .3em;
+}
+.buttons{
+	margin: 10px 0 20px 0;
+}
+.buttons button{
+	margin-right: 10px;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px #555; 
+}
+.title{
+	margin-bottom: 30px;
+}
+.title h1{
+	text-align: center;
+}
+.name_set input{
+	width: 100%;
+	font-size: 2em;
+	padding: 20px;
+}
